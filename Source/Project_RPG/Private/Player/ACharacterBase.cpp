@@ -1,14 +1,17 @@
-#include "Player/APlayerCharacter.h"
+#include "Player/ACharacterBase.h"
 
 // Sets default values
-AAPlayerCharacter::AAPlayerCharacter()
+AACharacterBase::AACharacterBase()
 {
  	
 	PrimaryActorTick.bCanEverTick = false;
 
+	weapon = CreateDefaultSubobject<USkeletalMeshComponent>("Weapon");
+	weapon->SetupAttachment(GetMesh(), FName("WeaponHandSocket"));
+	weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-void AAPlayerCharacter::BeginPlay()
+void AACharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 	

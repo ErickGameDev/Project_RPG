@@ -2,16 +2,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "APlayerCharacter.generated.h"
+#include "ACharacterBase.generated.h"
 
 UCLASS(Abstract)
-class PROJECT_RPG_API AAPlayerCharacter : public ACharacter
+class PROJECT_RPG_API AACharacterBase : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	AAPlayerCharacter();
+	AACharacterBase();
 
 protected:
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TObjectPtr<USkeletalMeshComponent> weapon;
 };
