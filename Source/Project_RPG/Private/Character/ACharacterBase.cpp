@@ -6,7 +6,7 @@ AACharacterBase::AACharacterBase()
  	
 	PrimaryActorTick.bCanEverTick = false;
 
-	weapon = CreateDefaultSubobject<USkeletalMeshComponent>("Weapon");
+	weapon = CreateDefaultSubobject<UStaticMeshComponent>("Weapon");
 	weapon->SetupAttachment(GetMesh(), FName("WeaponHandSocket"));
 	weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
