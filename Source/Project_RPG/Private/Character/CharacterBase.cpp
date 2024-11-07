@@ -1,7 +1,7 @@
-#include "Character/ACharacterBase.h"
+#include "Character/CharacterBase.h"
 
 // Sets default values
-AACharacterBase::AACharacterBase()
+ACharacterBase::ACharacterBase()
 {
  	
 	PrimaryActorTick.bCanEverTick = false;
@@ -11,7 +11,7 @@ AACharacterBase::AACharacterBase()
 	weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-void AACharacterBase::BeginPlay()
+void ACharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 	

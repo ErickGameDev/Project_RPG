@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/ACharacterBase.h"
-#include "APlayerCharacter.generated.h"
+#include "GameFramework/PlayerController.h"
+#include "MyPlayerController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROJECT_RPG_API AAPlayerCharacter : public AACharacterBase
+class PROJECT_RPG_API AMyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

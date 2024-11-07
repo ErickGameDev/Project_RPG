@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/ACharacterBase.h"
-#include "AEnemyCharacter.generated.h"
+#include "Character/CharacterBase.h"
+#include "EnemyCharacter.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROJECT_RPG_API AAEnemyCharacter : public AACharacterBase
+class PROJECT_RPG_API AEnemyCharacter : public ACharacterBase
 {
 	GENERATED_BODY()
 	
